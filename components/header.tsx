@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { LogoutButton } from "./logout-button";
 
 export default function Header() {
   return (
@@ -18,9 +19,7 @@ export default function Header() {
               Write
             </Button>
           </Link>
-          <Button variant="outline" size="sm">
-            Log out
-          </Button>
+          <LogoutButton />
         </nav>
       </div>
     </header>
