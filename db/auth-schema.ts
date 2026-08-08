@@ -1,5 +1,12 @@
 import { defineRelations } from "drizzle-orm";
-import { pgTable, text, timestamp, boolean, index } from "drizzle-orm/pg-core";
+import {
+  pgTable,
+  text,
+  timestamp,
+  boolean,
+  index,
+  integer,
+} from "drizzle-orm/pg-core";
 
 // 1. Define the User Table
 export const user = pgTable("user", {
@@ -17,7 +24,7 @@ export const user = pgTable("user", {
 
 // 2. Define the Article Table (with Foreign Key)
 export const article = pgTable("article", {
-  id: text("id").primaryKey(),
+  id: integer("id").primaryKey().generatedAlwaysAsIdentity(),
   image: text("image").notNull(),
   title: text("title").notNull(),
   content: text("content").notNull(),

@@ -25,11 +25,11 @@ export default function LoginPage() {
     setIsLoading(false);
 
     if (error) {
-      setError(error.message || "Invalid email or password");
+      setError(error.message ?? "Invalid email or password");
       return;
     }
 
-    router.push("/");
+    router.push("/home");
   }
 
   return (

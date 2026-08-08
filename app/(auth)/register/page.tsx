@@ -26,11 +26,11 @@ export default function RegisterPage() {
     setIsLoading(false);
 
     if (error) {
-      setError(error.message || "Something went wrong");
+      setError(error.message ?? "Something went wrong");
       return;
     }
 
-    router.push("/");
+    router.push("/home");
   }
 
   return (
